@@ -1,0 +1,24 @@
+# HERBench MRFS Evaluation Configuration
+# Usage: python evaluation/calculate_mrfs.py model=qwen25vl frame_selector=blip
+
+defaults:
+  - model: qwen25vl
+  - frame_selector: blip
+  - _self_
+
+# Data configuration
+data:
+  data_dir: "./data"  # Path to HERBench data directory
+  tasks: null  # List of task names to evaluate (null = all tasks)
+
+# MRFS-specific settings
+mrfs:
+  min_frames: 1  # Minimum number of frames to test
+  max_frames: 16  # Maximum number of frames to test (initial full context)
+
+# Evaluation settings
+evaluation:
+  device: "cuda"  # Device to run on
+  gpu_rank: 0  # GPU device rank for multi-GPU setup (e.g., 0, 1, 2, 3)
+  output_dir: "./results"  # Directory to save MRFS results
+  seed: 42  # Random seed

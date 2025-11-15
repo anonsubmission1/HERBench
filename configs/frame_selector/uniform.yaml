@@ -1,0 +1,5 @@
+# Uniform frame selector configuration
+
+name: uniform
+target_fps: 2.0  # Target FPS for frame extraction (not used for uniform, kept for interface)
+num_frames: 16  # Number of frames to select

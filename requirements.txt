@@ -1,0 +1,32 @@
+# HERBench Requirements
+# Python 3.8-3.12 (NOT 3.13+ due to Hydra incompatibility)
+#
+# Note: torch and torchvision should be installed via conda for better CUDA support
+# See environment.yml for conda installation
+
+# Configuration management
+hydra-core>=1.3.0,<1.4.0
+omegaconf>=2.3.0
+
+# Core ML/Data dependencies
+numpy>=1.24.0
+pandas>=2.0.0
+pillow>=10.0.0
+opencv-python>=4.8.0
+timm>=0.9.0
+
+# VLM model dependencies
+transformers>=4.40.0
+accelerate>=0.27.0
+qwen-vl-utils
+
+# Frame selection dependencies
+salesforce-lavis
+
+# Video processing
+decord
+av
+
+# Utilities
+tqdm>=4.66.0
+requests>=2.31.0

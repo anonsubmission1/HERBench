@@ -1,0 +1,17 @@
+# Vanilla BLIP similarity-based frame selector configuration
+
+name: blip
+model_name: "Salesforce/blip-itm-large-coco"  # BLIP model for similarity computation
+target_fps: 2.0  # Target FPS for frame extraction (on-the-fly mode)
+num_frames: 16  # Number of frames to select
+batch_size: 16  # Batch size for BLIP inference
+
+# Precomputed embeddings mode (optional)
+use_precomputed: false  # Set to true to use precomputed embeddings
+precomputed_dir: null  # Path to precomputed embeddings directory
+
+# Precomputed embeddings format:
+# <precomputed_dir>/
+#   <video_id>/
+#     frames.npy          # Frame indices [N]
+#     embeddings.npy      # Normalized frame embeddings [N, D]

@@ -1,0 +1,20 @@
+# HERBench Evaluation Configuration
+# Usage: python evaluation/run_evaluation.py model=qwen25vl frame_selector=uniform
+
+defaults:
+  - model: qwen25vl
+  - frame_selector: uniform
+  - _self_
+
+# Data configuration
+data:
+  data_dir: "./data"  # Path to HERBench data directory (contains tasks/ and videos/)
+  tasks: null  # List of task names to evaluate (null = all tasks)
+
+# Evaluation settings
+evaluation:
+  device: "cuda"  # Device to run on: cuda, cpu
+  gpu_rank: 0  # GPU device rank for multi-GPU setup (e.g., 0, 1, 2, 3)
+  batch_size: 1  # Batch size (keep at 1 for sequential processing)
+  output_dir: "./results"  # Directory to save results
+  seed: 42  # Random seed for reproducibility

@@ -1,0 +1,17 @@
+# Qwen2.5-VL-7B-Instruct model configuration
+
+name: qwen25vl
+model_id: "Qwen/Qwen2.5-VL-7B-Instruct"
+torch_dtype: "bfloat16"  # bfloat16, float16, float32
+max_frames: 16  # Maximum frames to process (only used when use_direct_video=false)
+
+# Direct video inference (Qwen2.5-VL can process video files directly)
+use_direct_video: false  # If true, feed video file directly instead of extracted frames
+video_fps: 1.0  # Frames per second for direct video processing
+video_max_pixels: 151200  # Maximum pixels per frame (360*420)
+
+# Generation configuration
+generation_config:
+  max_new_tokens: 50
+  do_sample: false
+  # temperature and top_p are not used when do_sample=false

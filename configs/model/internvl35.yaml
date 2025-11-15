@@ -1,0 +1,15 @@
+# InternVL3.5-8B model configuration
+
+name: internvl35
+model_id: "OpenGVLab/InternVL3_5-8B"
+torch_dtype: "bfloat16"  # bfloat16, float16, float32
+max_frames: 16  # Maximum frames to process (match frame_selector.num_frames)
+max_num_tiles: 1  # Use 1 tile per frame to avoid OOM on 48GB GPU
+                  # 16 frames × 1 tile = 16 tiles × 256 tokens = 4,096 vision tokens
+                  # This ensures we stay well within memory limits
+
+# Generation configuration
+generation_config:
+  max_new_tokens: 50
+  do_sample: false
+  # temperature and top_p can be adjusted if needed
