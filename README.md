@@ -1,4 +1,4 @@
-# HERBench: Benchmarking Multi-Evidence Integration in Video Question Answering
+# HERBench: A Benchmark for Multi-Evidence Integration in Video Question Answering
 
 Official repository for the paper "HERBench: A Benchmark for Multi-Evidence Integration in Video Question Answering".
 
@@ -130,7 +130,7 @@ If you use HERBench in your research, please cite:
 
 ```bibtex
 @article{herbench2025,
-  title={HERBench: Benchmarking Multi-Evidence Integration in Video Question Answering},
+  title={HERBench: A Benchmark for Multi-Evidence Integration in Video Question Answering},
   author={[Authors]},
   journal={CVPR},
   year={2026}
