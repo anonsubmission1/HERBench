@@ -132,8 +132,8 @@ If you use HERBench in your research, please cite:
 @article{herbench2025,
   title={HERBench: A Benchmark for Multi-Evidence Integration in Video Question Answering},
   author={[Authors]},
-  journal={CVPR},
-  year={2026}
+  journal={arXiv},
+  year={2025}
 }
 ```
 
